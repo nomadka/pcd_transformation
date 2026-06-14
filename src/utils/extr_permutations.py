@@ -21,8 +21,12 @@ def generate_extrinsic_permutations():
     return matrices
 
 def main():
+
+    # Load original trajectory matrices to extract camera poses
     poses = lift.load_standard_trajectory(INPUT_TRAJ)
+    # Load original pointcloud files
     ply_files = lift.load_ply_files(INPUT_DIR)
+
     E_candidates = generate_extrinsic_permutations()
     
     matrix_formats = ["direct", "inverse"]
