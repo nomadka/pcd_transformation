@@ -1,7 +1,8 @@
 import open3d as o3d
 import numpy as np
-import os
-import o3d_viewer as lift
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..')))
+import src.utils.loader as load 
 
 
 INPUT_DIR = "input_data"
@@ -13,10 +14,10 @@ def main():
 
     
     # Load original trajectory matrices to extract camera poses
-    poses = lift.load_standard_trajectory(INPUT_TRAJ)
+    poses = load.load_traj_file(file_dir=INPUT_DIR, file_name=INPUT_TRAJ)
     
     # Load original pointcloud files
-    ply_files = lift.load_ply_files(INPUT_DIR)
+    ply_files = load.load_ply_files(INPUT_DIR)
     
     # Exact Matrix for Config Direct 10
     E = np.array([
@@ -59,7 +60,9 @@ def main():
     #     [ 0, -1,  0,  0],
     #     [ 0,  0,  0,  1]
     # ])
-    print("Generating globally mirrored point clouds (ASCII)...")
+
+
+    print("Generating transformed point clouds (ASCII)...")
     for i, ply_file in enumerate(ply_files):
         if i >= len(poses):
             continue
