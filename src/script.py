@@ -3,6 +3,11 @@ import numpy as np
 import os
 import utils.loader as load
 
+
+''' The program applies the transformation matrix to the raw pont cloud files 
+and convert that into geometrically consistent and generate and replaces the 
+poses with an identity matrix'''
+
 INPUT_DIR = "input_data"
 INPUT_TRAJ = "traj.txt"
 OUTPUT_DIR = "./output_data/viewer_corrected"

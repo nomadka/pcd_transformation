@@ -5,6 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..
 import src.utils.loader as load 
 
 
+''' The program applies the transformation to the point clouds and permenently modifies it'''
+
 INPUT_DIR = "input_data"
 INPUT_TRAJ = "traj.txt"
 OUTPUT_DIR = "./output_data/o3d_corrected"

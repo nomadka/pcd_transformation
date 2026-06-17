@@ -5,6 +5,7 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..')))
 import src.utils.loader as load 
 
+''' The program creates various possible permutations of rotational and translationa combinations of the transformtion matrix'''
 
 INPUT_DIR = "input_data"
 INPUT_TRAJ = "traj.txt"

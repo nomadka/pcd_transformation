@@ -5,6 +5,7 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..')))
 import src.utils.loader as load 
 
+''' The program is just created to view any point clouds set from a particular viewer with their pose'''
 
 INPUT_DIR = "input_data"
 INPUT_TRAJ = "traj.txt"
