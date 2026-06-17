@@ -9,7 +9,7 @@ OUTPUT_DIR = "./output_data/viewer_corrected"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
-def main():
+def viewer_transformation():
     
     # Load original trajectory matrices to extract camera poses
     poses = load.load_traj_file(file_dir=INPUT_DIR, file_name=INPUT_TRAJ)
@@ -75,7 +75,7 @@ def main():
     for i, ply_file in enumerate(ply_files):
         if i >= len(poses):
             continue
-            
+    
         pcd = o3d.io.read_point_cloud(ply_file)
         M = poses[i]
         
@@ -95,8 +95,7 @@ def main():
             write_ascii=True
         )
     
-    # The trajectory file must be filled with Identity matrices to prevent the viewer 
-    # from applying the movements a second time.
+    # The trajectory file must be filled with Identity matrices to prevent the viewer from applying the transformation a second time.
     print("Generating Identity traj.txt...")
     out_traj_path = os.path.join(OUTPUT_DIR, "traj.txt")
     with open(out_traj_path, "w") as f_out:
@@ -108,4 +107,4 @@ def main():
     print(f"Viewer transformation of point clouds and poses completed. Find the files in '{OUTPUT_DIR}'")
 
 if __name__ == "__main__":
-    main()
+    viewer_transformation()

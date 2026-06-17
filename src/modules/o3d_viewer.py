@@ -9,22 +9,6 @@ import src.utils.loader as load
 INPUT_DIR = "input_data"
 INPUT_TRAJ = "traj.txt"
 
-# def load_standard_trajectory(filepath):
-    
-#     matrices = []
-#     with open(os.path.join(INPUT_DIR, filepath), 'r') as f:
-#         for line in f:
-#             values = list(map(float, line.strip().split()))
-#             if len(values) == 16:
-#                 # Reshape standard row-major 4th-column matrix directly
-#                 matrices.append(np.array(values).reshape(4, 4))
-    
-#     return matrices
-
-# def load_ply_files(file_dir):
-    
-#     return sorted(glob.glob(os.path.join(file_dir, '*.ply')))
-
 def main():
  
     
