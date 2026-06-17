@@ -120,4 +120,4 @@ This combination forces the viewer to render the exact, mathematically perfect g
 ## 5. References
 * Spatial transformation resources and tutorials via YouTube.
 * Open3D GitHub Discussions: [Issue #4641](https://github.com/isl-org/Open3D/issues/4641)
-* Large Language Model Support: Google Gemini (Pro / Flash) for architectural debugging and mathematical matrix derivation.
+* Large Language Model Support: Google Gemini (3.1 Pro / 3.5 Flash)
