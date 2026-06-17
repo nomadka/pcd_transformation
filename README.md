@@ -50,6 +50,11 @@ Once your environment is active, install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
+or
+```bash
+pip install open3d numpy
+```
+
 ### Copying Input Files
 Copy the raw point cloud files and `traj.txt` file into the `./input_data` directory
 
