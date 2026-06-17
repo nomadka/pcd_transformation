@@ -4,6 +4,7 @@ import numpy as np
 import glob
 import os
 
+''' These are the helper functions which allows to load the poses and all the point clouds in a directory into a variable'''
 
 def load_traj_file(file_dir, file_name):
     
